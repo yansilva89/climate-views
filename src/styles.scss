@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+// Variables Colors
+$primary-color: #008ad2;
+$secondary-color: #38B449;
+$third-color: #002439;
+$error-color: #ff4b4b;
+$grey-color: rgba(0, 0, 0, 0.54);
+
+// Google Font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+// NG MDC
+$mdc-theme-primary: $primary-color; // primary color example
+$mdc-theme-secondary: #388e3c; // secondary color example
+// Import MDC
+@import "~@angular-mdc/theme/material";
+
+// Defaults
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  color: $third-color;
+}
+
+body, h1, h2, h3, p, ul {
+	padding: 0px;
+  margin: 0px;
+  a {
+    text-decoration: none;
+    color: #0072bc;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  p {
+    word-wrap: break-word !important;
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+.climate-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  min-height: 250px;
+  .item {
+    margin-bottom: 15px;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+    p {
+      font-weight: 600;
+    }
+  }
+}

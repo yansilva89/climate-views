@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <div class="climate-box">
+    <div class="top-bar">
+      <h1>ClimateViews</h1>
+      <h4>Verifique as condições climáticas de qualquer região</h4>
+    </div>
+    <div class="search">
+      <mdc-form-field fluid>
+        <mdc-text-field label="Informe o nome da cidade" [(ngModel)]="cityName" required></mdc-text-field>
+      </mdc-form-field>
+
+      <mdc-select placeholder="UF" [(ngModel)]="stateName" required>
+        <mdc-menu>
+          <mdc-list>
+            <mdc-list-item value="AC">AC</mdc-list-item>
+            <mdc-list-item value="AL">AL</mdc-list-item>
+            <mdc-list-item value="AP">AP</mdc-list-item>
+            <mdc-list-item value="AM">AM</mdc-list-item>
+            <mdc-list-item value="BA">BA</mdc-list-item>
+            <mdc-list-item value="CE">CE</mdc-list-item>
+            <mdc-list-item value="DF">DF</mdc-list-item>
+            <mdc-list-item value="ES">ES</mdc-list-item>
+            <mdc-list-item value="GO">GO</mdc-list-item>
+            <mdc-list-item value="MA">MA</mdc-list-item>
+            <mdc-list-item value="MT">MT</mdc-list-item>
+            <mdc-list-item value="MS">MS</mdc-list-item>
+            <mdc-list-item value="MG">MG</mdc-list-item>
+            <mdc-list-item value="PA">PA</mdc-list-item>
+            <mdc-list-item value="PB">PB</mdc-list-item>
+            <mdc-list-item value="PR">PR</mdc-list-item>
+            <mdc-list-item value="PE">PE</mdc-list-item>
+            <mdc-list-item value="PI">PI</mdc-list-item>
+            <mdc-list-item value="RJ">RJ</mdc-list-item>
+            <mdc-list-item value="RN">RN</mdc-list-item>
+            <mdc-list-item value="RS">RS</mdc-list-item>
+            <mdc-list-item value="RO">RO</mdc-list-item>
+            <mdc-list-item value="RR">RR</mdc-list-item>
+            <mdc-list-item value="SC">SC</mdc-list-item>
+            <mdc-list-item value="SP">SP</mdc-list-item>
+            <mdc-list-item value="SE">SE</mdc-list-item>
+            <mdc-list-item value="TO">TO</mdc-list-item>
+          </mdc-list>
+        </mdc-menu>
+      </mdc-select>
+
+      <button mdc-button primary (click)="getLocales()">
+        Buscar <img src="../../../assets/search.svg" alt="">
+      </button>
+
+    </div>
+    <div class="this-climates">
+      <app-climate-today class="climates-values" [climateToday]="list[0]" *ngIf="list[0]">
+      </app-climate-today>
+
+      <app-climates-view class="climates-values margin-side" [climatesView]="list[1]" [title]="'Amanhã'" *ngIf="list[1]">
+      </app-climates-view>
+
+      <app-climates-view class="climates-values" [climatesView]="list[2]" [date]="list[2].date" *ngIf="list[2]">
+      </app-climates-view>
+    </div>
+  </div>
+</div>
