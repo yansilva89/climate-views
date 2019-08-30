@@ -1,27 +1,12 @@
-# Climate
+# Climate Views
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
+Projeto desenvolvido com o objetivo de disponibilizar as condições climáticas atuais, baseadas nos resultados trazidos da API Clima-tempo.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+As tecnologias utilizadas foram:
+- Angular 8.0 como wrapper de toda a aplicação;
+- Sass(scss) para melhor leitura e produtividade na escrita e compilação CSS;
+- Angular MDC (Material Design) para funcionamento e caracterização de alguns elementos visuais;
+- As requests foram implementadas utilizando a propriedade HTTP Client que o próprio Angular já disponibiliza;
+- O grid foi projetado utilizando CSS Flexbox para melhor manipulação dos elementos visuais;
+- Para rotas existentes a aplicação utiliza o Angular Router;
+- A Api Clima-tempo foi utilizada como fornecedora dos dados exibidos na aplicação, para acessar clique no link: http://apiadvisor.climatempo.com.br/doc/index.html#api-Climate.
