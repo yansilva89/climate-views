@@ -10,3 +10,11 @@ As tecnologias utilizadas foram:
 - O grid foi projetado utilizando CSS Flexbox para melhor manipulação dos elementos visuais;
 - Para rotas existentes a aplicação utiliza o Angular Router;
 - A Api Clima-tempo foi utilizada como fornecedora dos dados exibidos na aplicação, para acessar clique no link: http://apiadvisor.climatempo.com.br/doc/index.html#api-Climate.
+
+Para execução do projeto:
+1. Instale o Angular CLI: npm install -g @angular/cli;
+2. Faça a clonagem do projeto disponibilizado no repositório por meio do link fornecido pelo Github e em seu terminal digite: git clone cole-em-seguida-o-link-do-repositótio;
+3. Acesse pelo terminal o diretório do repositório baixado: cd climate;
+4. Execute o comando: ng serve ou ng s;
+5. Aguarde o processo de build e compilação até que atinja 100%;
+6. Em seu browser acesse a URL: localhost:4200.
