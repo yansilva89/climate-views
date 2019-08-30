@@ -11,23 +11,33 @@ export class ContainerComponent implements OnInit {
   stateName: string;
   citySelected: {} = {};
   list = [];
+  loader = false;
 
   constructor(private requestService: RequestsService) { }
 
   ngOnInit() { }
 
-  getLocales() {
+  async getLocales() {
+    this.loader = true;
+    await this.delay(500); // Delay
     this.requestService.getLocales(this.cityName, this.stateName).subscribe(data => {
       this.citySelected = data[0];
       this.getClimate();
+      setTimeout(() => {
+        this.loader = false;
+      }, 0);
     });
   }
 
   getClimate() {
     this.requestService.getClimate(this.citySelected['id']).subscribe(climate => {
       this.list = climate.data.filter(item => climate.data.indexOf(item) < 3);
-      console.log(this.list);
     });
+  }
+
+  // Async Delay
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
   }
 
 }

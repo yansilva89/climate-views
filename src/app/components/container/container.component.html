@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="climate-box">
     <div class="top-bar">
-      <h1>ClimateViews</h1>
+      <h1>Climate Views</h1>
       <h4>Verifique as condições climáticas de qualquer região</h4>
     </div>
     <div class="search">
@@ -48,6 +48,9 @@
       </button>
 
     </div>
+
+    <div class="loader" *ngIf="loader"><div></div><div></div><div></div><div></div></div>
+
     <div class="this-climates">
       <app-climate-today class="climates-values" [climateToday]="list[0]" *ngIf="list[0]">
       </app-climate-today>
