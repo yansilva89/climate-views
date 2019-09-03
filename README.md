@@ -9,6 +9,7 @@ As requests foram implementadas utilizando a propriedade HTTP Client que o próp
 O grid foi projetado utilizando CSS Flexbox para melhor manipulação dos elementos visuais;
 Para rotas existentes a aplicação utiliza o Angular Router;
 A Api Clima-tempo foi utilizada como fornecedora dos dados exibidos na aplicação, para acessar clique no link: http://apiadvisor.climatempo.com.br/doc/index.html#api-Climate.
+
 Para execução do projeto:
 
 Instale o Angular CLI: npm install -g @angular/cli;
